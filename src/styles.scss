@@ -1,0 +1,88 @@
+
+@font-face {
+	font-family: 'Roboto';
+	src: url(./fonts/Roboto-Regular.ttf) format(truetype);
+}
+
+/** Global styles **/
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    > * {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    transition: background .8s ease-in-out;
+    text-align: center;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+    min-height: auto;
+}
+
+/** Headers **/
+
+h1 {
+    font-weight: 600;
+    font-size: 64px;
+    color: chocolate;
+}
+
+/** sections **/
+
+/** player **/
+
+.player {
+    &__data {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        .control-button {
+            width: 70px;
+            height: 70px;
+            padding: 10px;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: transparent;
+            border: none;
+        }
+        &.summer {
+            background-image: url('../public/assets/summer-bg.jpg');
+        }
+        &.rainy {
+            background-image: url('../public/assets/rainy-bg.jpg');
+        }
+        &.winter {
+            background-image: url('../public/assets/winter-bg.jpg');
+        }
+    }
+}
+
+.audio {
+    display: none;
+}

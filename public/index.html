@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <title>Whether sounds</title>
+    <link rel="shoutcut icon" href="favicon.png">
+    <link rel="preload" href="./assets/summer-bg.jpg" as="image">
+    <link rel="preload" href="./assets/rainy-bg.jpg" as="image">
+    <link rel="preload" href="./assets/winter-bg.jpg" as="image">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="primary-title">Wether sounds</h1>
+    </div>
+    <section class="player">
+        <div class="container">
+            <div class="player__data">
+                <audio id="audio" class="audio" controls>
+                    <source id="source" type="audio/mpeg">
+                </audio>
+                <div class="player__item summer" data-audio="summer.mp3" data-bg="summer-bg.jpg">
+                    <div class="controls">
+                        <button class="control-button">
+                            <img class="control-icon" data-icon="sun.svg" src="./assets/icons/sun.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="player__item rainy" data-audio="rain.mp3" data-bg="rainy-bg.jpg">
+                    <div class="controls">
+                        <button class="control-button">
+                            <img class="control-icon" data-icon="cloud-rain.svg" src="./assets/icons/cloud-rain.svg"
+                                alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="player__item winter" data-audio="winter.mp3" data-bg="winter-bg.jpg">
+                    <div class="controls">
+                        <button class="control-button">
+                            <img class="control-icon" data-icon="cloud-snow.svg" src="./assets/icons/cloud-snow.svg"
+                                alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <input type="range" class="volume-control" min="0" max="1" step="0.01" value="1">
+</body>
+
+</html>
